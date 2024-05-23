@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ce62qcm5gdrhs"
-path="res://.godot/imported/New Piskel-4.png.png-c2aae7766605eb84906e2950fe7a5334.ctex"
+uid="uid://cmdvpouwflh1a"
+path="res://.godot/imported/CuoreVuoto.png-f2568743bfa889bd0750dd1970b55972.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Mysprites/New Piskel-4.png.png"
-dest_files=["res://.godot/imported/New Piskel-4.png.png-c2aae7766605eb84906e2950fe7a5334.ctex"]
+source_file="res://Mysprites/CuoreVuoto.png"
+dest_files=["res://.godot/imported/CuoreVuoto.png-f2568743bfa889bd0750dd1970b55972.ctex"]
 
 [params]
 

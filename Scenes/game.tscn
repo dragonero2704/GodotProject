@@ -9,10 +9,12 @@ position = Vector2(-1, -1)
 script = ExtResource("1_fcdum")
 
 [node name="Player" parent="." instance=ExtResource("2_trs1b")]
-position = Vector2(260, 625)
+position = Vector2(349, 766)
 
 [node name="PlayerSpawnPos" type="Marker2D" parent="."]
-position = Vector2(259, 600)
+position = Vector2(282, 912)
 
 [node name="Laser" parent="." instance=ExtResource("3_0r2rq")]
-position = Vector2(261, 627)
+position = Vector2(281, 917)
+
+[node name="LaserContainer" type="Node2D" parent="."]

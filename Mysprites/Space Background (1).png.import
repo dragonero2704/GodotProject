@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bogc0b32e2b46"
-path="res://.godot/imported/New Piskel-6.png.png-64eb6f16ce14281764d2b2ba5c53f07c.ctex"
+uid="uid://bf22jgvw57dw2"
+path="res://.godot/imported/Space Background (1).png-292b4f0e040e09a90427068e01b399a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Mysprites/New Piskel-6.png.png"
-dest_files=["res://.godot/imported/New Piskel-6.png.png-64eb6f16ce14281764d2b2ba5c53f07c.ctex"]
+source_file="res://Mysprites/Space Background (1).png"
+dest_files=["res://.godot/imported/Space Background (1).png-292b4f0e040e09a90427068e01b399a5.ctex"]
 
 [params]
 
