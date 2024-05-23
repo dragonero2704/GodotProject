@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://3bhcfrntalxw" path="res://Mysprites/New Piskel-1.png.png" id="1_j4gc7"]
 
 [sub_resource type="GDScript" id="GDScript_ikt0y"]
-script/source = "extends CharacterBody2D
+script/source = "class_name Player extends CharacterBody2D
 
 signal laser_shoot(laser_scene, location)
 
@@ -40,6 +40,7 @@ func die():
 collision_mask = 2
 motion_mode = 1
 script = SubResource("GDScript_ikt0y")
+speed = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.7, 0.7)

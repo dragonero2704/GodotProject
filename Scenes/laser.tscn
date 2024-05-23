@@ -1,26 +1,44 @@
-[gd_scene load_steps=4 format=3 uid="uid://2lww8agqr3la"]
+[gd_scene load_steps=5 format=3 uid="uid://2lww8agqr3la"]
 
 [ext_resource type="Script" path="res://Script/laser.gd" id="1_70qdi"]
-[ext_resource type="Texture2D" uid="uid://ctsniu1ypgle8" path="res://kenney_space-shooter-redux/PNG/Lasers/laserRed01.png" id="1_d3hy4"]
+[ext_resource type="Texture2D" uid="uid://d0breo00lh2rn" path="res://Mysprites/A.png" id="2_alds7"]
+[ext_resource type="Texture2D" uid="uid://d0vrkhiaj0emy" path="res://Mysprites/I.png" id="3_pxegi"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0spwd"]
-radius = 4.0
-height = 46.0
+radius = 12.0
+height = 48.0
 
 [node name="Laser" type="Area2D"]
+collision_layer = 4
+collision_mask = 2
 script = ExtResource("1_70qdi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -23)
+position = Vector2(-33, -23)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("1_d3hy4")
+texture = ExtResource("2_alds7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -22)
+position = Vector2(-33, -22)
 shape = SubResource("CapsuleShape2D_0spwd")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(0, 9)
+position = Vector2(-33, 9)
 scale = Vector2(0.65, 0.35)
 
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(29.2, -23)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_pxegi")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(25, -24)
+shape = SubResource("CapsuleShape2D_0spwd")
+
+[node name="VisibleOnScreenNotifier2D2" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(25, 9)
+scale = Vector2(0.65, 0.35)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D2" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
