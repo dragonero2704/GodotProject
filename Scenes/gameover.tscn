@@ -1,12 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://dooq4yjybiqng"]
 
 [ext_resource type="Script" path="res://Script/gameover.gd" id="1_1lpha"]
-
-[sub_resource type="SystemFont" id="SystemFont_4nngk"]
+[ext_resource type="FontFile" uid="uid://dgsu25tpjolvj" path="res://kenney_space-shooter-redux/Bonus/kenvector_future.ttf" id="2_orcqo"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0toeh"]
-font = SubResource("SystemFont_4nngk")
-font_size = 50
+font = ExtResource("2_orcqo")
+font_size = 80
 
 [node name="Gameover" type="Control"]
 layout_mode = 3
@@ -36,8 +35,10 @@ size_flags_vertical = 4
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/CenterContainer"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
-text = "GAME OVER"
+text = "GAME
+OVER"
 label_settings = SubResource("LabelSettings_0toeh")
+horizontal_alignment = 1
 
 [node name="CenterContainer2" type="CenterContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -55,6 +56,7 @@ layout_mode = 2
 
 [node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 6
 text = "Back to menu"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
