@@ -1,8 +1,8 @@
 extends Control
 
-const level1 = "res://Scenes/game1.tscn"
-const level2 = "res://Scenes/game2.tscn"
-const level3 = "res://Scenes/game3.tscn"
+const level1 = "res://Scenes/game.tscn"
+const level2 = "res://Scenes/game.tscn"
+const level3 = "res://Scenes/game.tscn"
 const menu = "res://Scenes/menu.tscn"
 
 # Called when the node enters the scene tree for the first time.

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cb7q55aiva3hg"]
+[gd_scene load_steps=7 format=3 uid="uid://cb7q55aiva3hg"]
 
 [ext_resource type="Script" path="res://Script/game.gd" id="1_fcdum"]
 [ext_resource type="Texture2D" uid="uid://bkayairc3dati" path="res://Mysprites/Space Background.png" id="2_q6ikq"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://2lww8agqr3la" path="res://Scenes/laser.tscn" id="3_0r2rq"]
 [ext_resource type="PackedScene" uid="uid://cey06d4gsvnqy" path="res://Scenes/enemy.tscn" id="4_lljtk"]
 [ext_resource type="PackedScene" uid="uid://cdefxgmb5wwdw" path="res://Scenes/enemy2.tscn" id="6_bq2uo"]
-[ext_resource type="PackedScene" uid="uid://tonemvyctkmv" path="res://Scenes/enemy3.tscn" id="7_uxxqc"]
 
 [node name="Game" type="Node2D"]
 position = Vector2(-1, -1)
@@ -46,10 +45,7 @@ scale = Vector2(-2.78248, 22.7448)
 autostart = true
 
 [node name="Enemy2" parent="." instance=ExtResource("6_bq2uo")]
-position = Vector2(408, 522)
+position = Vector2(128, 664)
 scale = Vector2(2, 2)
-
-[node name="Enemy3" parent="." instance=ExtResource("7_uxxqc")]
-position = Vector2(182, 240)
 
 [connection signal="timeout" from="EnemySpawnerTimer" to="." method="_on_enemy_spawner_timer_timeout"]

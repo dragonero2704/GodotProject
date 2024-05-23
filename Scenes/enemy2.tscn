@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdefxgmb5wwdw"]
+
+[ext_resource type="Script" path="res://Script/enemy.gd" id="1_y2wt4"]
+[ext_resource type="Texture2D" uid="uid://bih5bvky21fg0" path="res://Mysprites/New Piskel-6.png-1.png-2.png (2).png" id="2_lauco"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_brg7p"]
+radius = 16.0312
+
+[node name="Enemy" type="Area2D"]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_y2wt4")
+
+[node name="Enemy" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_lauco")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_brg7p")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(0, -40)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

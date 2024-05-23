@@ -27,5 +27,6 @@ func _physics_process(delta):
 func shoot():
 	laser_shoot.emit(laser_scene, muzzle.global_position)
 
+
 func die():
 	queue_free()

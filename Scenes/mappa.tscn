@@ -44,9 +44,10 @@ texture = ExtResource("1_f3gtd")
 stretch_mode = 5
 
 [node name="IcyPlanetButton" type="Button" parent="sfondo/VBoxContainer/IcyPlanet/IcyPlanetTexture"]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+z_index = 10
+layout_mode = 2
+offset_right = 540.0
+offset_bottom = 217.0
 
 [node name="WaterPlanet" type="MarginContainer" parent="sfondo/VBoxContainer"]
 layout_mode = 2
@@ -60,9 +61,10 @@ texture = ExtResource("3_qboma")
 stretch_mode = 5
 
 [node name="WaterPlanetButton" type="Button" parent="sfondo/VBoxContainer/WaterPlanet/WaterPlanetTexture"]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+z_index = 10
+layout_mode = 2
+offset_right = 540.0
+offset_bottom = 217.0
 
 [node name="FirePlanet" type="MarginContainer" parent="sfondo/VBoxContainer"]
 layout_mode = 2
@@ -76,9 +78,10 @@ texture = ExtResource("4_8apid")
 stretch_mode = 5
 
 [node name="FirePlanetButton" type="Button" parent="sfondo/VBoxContainer/FirePlanet/FirePlanetTexture"]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+z_index = 10
+layout_mode = 2
+offset_right = 540.0
+offset_bottom = 217.0
 
 [node name="Sun" type="MarginContainer" parent="sfondo/VBoxContainer"]
 layout_mode = 2
@@ -93,9 +96,10 @@ expand_mode = 2
 stretch_mode = 6
 
 [node name="BackToMenu" type="Button" parent="sfondo/VBoxContainer/Sun/SunTexture"]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+z_index = 11
+layout_mode = 2
+offset_right = 540.0
+offset_bottom = 237.0
 
 [connection signal="pressed" from="sfondo/VBoxContainer/IcyPlanet/IcyPlanetTexture/IcyPlanetButton" to="." method="_on_icy_planet_button_pressed"]
 [connection signal="pressed" from="sfondo/VBoxContainer/WaterPlanet/WaterPlanetTexture/WaterPlanetButton" to="." method="_on_water_planet_button_pressed"]
