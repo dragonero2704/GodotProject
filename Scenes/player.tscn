@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://wji58q364e56"]
+
+[ext_resource type="Texture2D" uid="uid://l0kjojpt4eol" path="res://kenney_space-shooter-redux/PNG/playerShip1_blue.png" id="1_8waoa"]
+
+[sub_resource type="GDScript" id="GDScript_ikt0y"]
+script/source = "extends CharacterBody2D
+
+@export var speed = 300
+
+func _physics_process(delta):
+	var direction = Vector2(Input.get_axis(\"move_left\",\"move_right\"),
+	Input.get_axis(\"move_up\",\"move_down\"))
+	velocity = direction * speed
+	move_and_slide()
+"
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+motion_mode = 1
+script = SubResource("GDScript_ikt0y")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_8waoa")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-32, 17, -34, -4, -25, 1, -9, -8, -6, -26, 6, -26, 9, -8, 25, 1, 33, -4, 32, 17, 10, 19, 6, 26, -6, 26, -10, 19)
