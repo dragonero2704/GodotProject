@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://wss2xb03t45r"]
+
+[ext_resource type="Script" path="res://Script/mappa.gd" id="1_x4hfj"]
+[ext_resource type="Texture2D" uid="uid://dhr7q3e2np1w3" path="res://Textures/jupiter.jpg" id="2_s33bw"]
+
+[node name="Planetario" type="CanvasLayer"]
+script = ExtResource("1_x4hfj")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="pianeta_1" type="TextureButton" parent="MarginContainer/HBoxContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+texture_normal = ExtResource("2_s33bw")
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="pianeta_2" type="TextureButton" parent="MarginContainer/HBoxContainer/MarginContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("2_s33bw")
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/pianeta_1" to="." method="_on_pianeta_1_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer2/pianeta_2" to="." method="_on_pianeta_2_pressed"]
