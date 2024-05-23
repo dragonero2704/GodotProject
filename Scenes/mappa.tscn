@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://wss2xb03t45r"]
+[gd_scene load_steps=3 format=3 uid="uid://c5eqg234ejm2s"]
 
 [ext_resource type="Script" path="res://Script/mappa.gd" id="1_x4hfj"]
 [ext_resource type="Texture2D" uid="uid://dhr7q3e2np1w3" path="res://Textures/jupiter.jpg" id="2_s33bw"]
